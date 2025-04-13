@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Dashboard</title>
+  <link rel="stylesheet" href="new-dashboard.css" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome, <span id="user-name">Loading...</span> 👋</h1>
+
+    <section class="create-funddrive">
+      <h2>Create a Funddrive</h2>
+      <form id="funddrive-form">
+        <input type="text" id="title" placeholder="Fund Title" required />
+        <input type="text" id="method" placeholder="Payment Method (e.g., M-Pesa)" required />
+        <input type="text" id="detail" placeholder="Your Paybill/Number/Link" required />
+        <input type="number" id="target" placeholder="Target Amount in KES" required />
+        <textarea id="description" placeholder="Describe your cause..." required></textarea>
+        <button type="submit">Create Funddrive</button>
+      </form>
+    </section>
+
+    <section id="funddrive-card-container">
+      <!-- Funddrive card will show here -->
+    </section>
+  </div>
+
+  <script src="new-dashboard.js"></script>
+</body>
+</html>
